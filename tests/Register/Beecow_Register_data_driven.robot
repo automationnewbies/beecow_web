@@ -47,7 +47,10 @@ TC004_Register Fail with fields Contain Special Characters - Data Driven
 
 *** Keywords ***
 Open Browser And Goes To Register Page
-    Open Browser    ${sever_test}    ${BROWSER}
+#    Open Browser    ${sever_test}    ${BROWSER}
+    ${SERVER}    Catenate    SEPARATOR=    ${SERVER_URL}    :4444/wd/hub
+    Set Suite Variable    ${SERVER}
+    Open Browser    ${url_sever}    ${BROWSER}    remote_url=${SERVER}
     Set Selenium Speed    ${DELAY}
     Set Selenium Timeout    ${TIMEOUT}
     Maximize Browser Window

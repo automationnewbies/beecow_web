@@ -37,7 +37,10 @@ TC003_Login Fail with Username And Password Contain Special Characters - Data Dr
 
 *** Keywords ***
 Open Browser And Goes To Login Page
-    Open Browser    ${sever_test}    ${BROWSER}
+#    Open Browser    ${sever_test}    ${BROWSER}
+    ${SERVER}    Catenate    SEPARATOR=    ${SERVER_URL}    :4444/wd/hub
+    Set Suite Variable    ${SERVER}
+    Open Browser    ${url_sever}    ${BROWSER}    remote_url=${SERVER}
     Set Selenium Speed    ${DELAY}
     Set Selenium Timeout    ${TIMEOUT}
     Maximize Browser Window
