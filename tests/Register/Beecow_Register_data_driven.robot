@@ -50,7 +50,7 @@ Open Browser And Goes To Register Page
 #    Open Browser    ${sever_test}    ${BROWSER}
     ${SERVER}    Catenate    SEPARATOR=    ${SERVER_URL}    :4444/wd/hub
     Set Suite Variable    ${SERVER}
-    Open Browser    ${SERVER_URL}    ${BROWSER}    remote_url=${SERVER}
+    Open Browser    ${SERVER_TEST}    ${BROWSER}    remote_url=${SERVER}
     Set Selenium Speed    ${DELAY}
     Set Selenium Timeout    ${TIMEOUT}
     Maximize Browser Window
