@@ -8,13 +8,13 @@ Resource          ${CURDIR}${/}..${/}..${/}..${/}resources${/}objects${/}popup${
 Input Values Login Page
     [Arguments]    ${username}    ${password}
     [Documentation]    LOGIN_KEY: Input username & password in login page
-    Wait Until Element Is Visible    id=${id_txt_pop_username}
-    Input Text    id=${id_txt_pop_username}    ${username}
-    Input Text    xpath=${xpath_txt_pop_password}    ${password}
+    Wait Until Element Is Visible    id=${ID.TXT.POP.USERNAME}
+    Input Text    id=${ID.TXT.POP.USERNAME}    ${username}
+    Input Text    xpath=${XPATH.TXT.POP.PASSWORD}    ${password}
 
 Click Button Login Popup
     [Documentation]    LOGIN_KEY: Click button login in popup loginơ
-    Click Button    xpath=${xpath_btn_pop_login}
+    Click Button    xpath=${XPATH.BTN.POP.LOGIN}
 
 Log Out Beecow
     [Documentation]    LOGIN_KEY: Log Out Beecow

@@ -8,21 +8,21 @@ Resource          ${CURDIR}${/}..${/}..${/}..${/}resources${/}objects${/}popup${
 Input Values Register Popup Page
     [Arguments]    ${username}    ${password}    ${fullname}
     [Documentation]    REGISTER_KEY: Input Values Register Popup Page
-    Wait Until Element Is Visible    id=${id_txt_pop_username}
-    Input Text    id=${id_txt_pop_username}    ${username}
-    Input Text    xpath=${xpath_txt_pop_password}    ${password}
-    Input Text    id=${id_txt_pop_your_name}    ${fullname}
+    Wait Until Element Is Visible    id=${ID.TXT.POP.USERNAME}
+    Input Text    id=${ID.TXT.POP.USERNAME}    ${username}
+    Input Text    xpath=${XPATH.TXT.POP.PASSWORD}    ${password}
+    Input Text    id=${ID.TXT.POP.YOUR.NAME}    ${fullname}
 
 Click Button Continue Popup
     [Documentation]    REGISTER_KEY: Click button continue to register new user
-    Click Button    xpath=${xpath_btn_continue}
+    Click Button    xpath=${XPATH.BTN.CONTINUE}
 
 Input Activation Code
     [Arguments]    ${activation_code}
     [Documentation]    REGISTER_KEY: Input Activation Code
-    Wait Until Element Is Visible    id=${id_txt_code}
-    Input Text    id=${id_txt_code}    ${activation_code}
+    Wait Until Element Is Visible    id=${ID.TXT.CODE}
+    Input Text    id=${ID.TXT.CODE}    ${activation_code}
 
 Click Button Verify And Login
     [Documentation]    REGISTER_KEY: Click Button Verify And Login
-    Click Button    xpath=${xpath_btn_active_code}
+    Click Button    xpath=${XPATH.BTN.ACTIVE.CODE}

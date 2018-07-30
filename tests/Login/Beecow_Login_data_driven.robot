@@ -32,7 +32,7 @@ TC002_Login Fail With PASSWORD validation - Data Driven
 
 TC003_Login Fail with Username And Password Contain Special Characters - Data Driven
     [Tags]    TC003
-    !^%^%^&*(    &*^&&*^    ${expected_error_msg}
+    !^%^%^&*(    ${pass_general}    ${expected_error_msg}
     !^%^%^&*(@yopmail.com    &*^&&*^    ${expected_error_msg_invalid_email}
 
 *** Keywords ***

@@ -4,9 +4,10 @@ Documentation     /* LIST GLOBAL OBJECT */
 
 *** Variable ***
 # Object Beecow Getstarted popup
-${id_btn_getstarted}    btn-start-mobi
+${ID.BTN.GETSTARTED}    btn-start-mobi
 # Header Menu
-${xpath_btn_login}    .//span[@beetranslate='beecow.action.login']
-${xpath_btn_signup}    .//span[@beetranslate='beecow.action.signup']
-${xpath_lbl_profile_name}    .//span[@class='txt']
-${xpath_lnk_profile_logout}    .//div[beetranslate='beecow.action.logout']
+${XPATH.BTN.LOGIN}    .//span[@beetranslate='beecow.action.login']
+${XPATH.BTN.SIGNUP}    .//span[@beetranslate='beecow.action.signup']
+
+${XPATH.LBL.PROFILE.NAME}    .//span[@class='txt']
+${XPATH.LNK.PROFILE.LOGOUT}    .//div[beetranslate='beecow.action.logout']

@@ -16,21 +16,24 @@ Select Language
 
 Click Button GetStarted
     [Documentation]    GLOBAL_KEY: Click button getstarted when page is open
-    Wait Until Element Is Visible    id=${id_btn_getstarted}
-    Click Element    id=${id_btn_getstarted}
+    Wait Until Element Is Visible    id=${ID.BTN.GETSTARTED}
+    Click Element    id=${ID.BTN.GETSTARTED}
 
 Click Button Login Header
     [Documentation]    GLOBAL_KEY: Click button LOGIN at the HEADER menu
-    Click Element    xpath=${xpath_btn_login}
+    Click Element    xpath=${XPATH.BTN.LOGIN}
 
 Click Button Sign Up Header
     [Documentation]    GLOBAL_KEY: Click Button Sign Up Header
-    Click Element    xpath=${xpath_btn_signup}
+    Click Element    xpath=${XPATH.BTN.SIGNUP}
 
 Open Browser And Click GetStarted Button
     [Arguments]    ${url_sever}
     [Documentation]    GLOBAL_KEY: Open Browser And Click GetStarted Button
-    Open Browser    ${url_sever}    ${BROWSER}
+#    Open Browser    ${url_sever}    ${BROWSER}
+    ${SERVER}    Catenate    SEPARATOR=    ${SERVER_URL}    :4444/wd/hub
+    Set Suite Variable    ${SERVER}
+    Open Browser    ${url_sever}    ${BROWSER}    remote_url=${SERVER}
     Set Selenium Speed    ${DELAY}
     Set Selenium Timeout    ${TIMEOUT}
     Maximize Browser Window

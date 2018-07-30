@@ -4,12 +4,12 @@ Documentation     /* LIST OBJECT FOR LOGIN PAGE */
 
 *** Variable ***
 # Object Beecow Login page
-${id_txt_pop_username}    usr
-${xpath_txt_pop_password}    .//fieldset//input[@id='pwd']
-${xpath_btn_pop_login}    .//button[@beetranslate='beecow.login.login']
-${xpath_lbl_error_message}    .//fieldset/div[last()]/span/span
+${ID.TXT.POP.USERNAME}    usr
+${XPATH.TXT.POP.PASSWORD}    .//fieldset//input[@id='pwd']
+${XPATH.BTN.POP.LOGIN}    .//button[@beetranslate='beecow.login.login']
+${XPATH.LBL.ERROR.MESSAGE}    .//fieldset/div[last()]/span/span
 # Register
-${id_txt_pop_your_name}    displayName
-${xpath_btn_continue}    .//button[@beetranslate='beecow.signup.continue']
-${id_txt_code}    code
-${xpath_btn_active_code}    .//button[@beetranslate='beecow.activate.button']
+${ID.TXT.POP.YOUR.NAME}    displayName
+${XPATH.BTN.CONTINUE}    .//button[@beetranslate='beecow.signup.continue']
+${ID.TXT.CODE}    code
+${XPATH.BTN.ACTIVE.CODE}    .//button[@beetranslate='beecow.activate.button']

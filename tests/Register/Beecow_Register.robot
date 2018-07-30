@@ -22,7 +22,8 @@ TCA0_Basic flow (B) - (0-sanityCheck)
     Log    ${time}
 #    When I Register New User    ${sever_test}    user${time}@yopmail.com    ${pass_general}    User ${time}
 #    ${active_code_db}=    Get Activation Code From Database By Email    user${time}@yopmail.com
-    ${active_code_db}=    Get Activation Code From Database By Email    user26072018105846@yopmail.com
+    ${active_code_db}=    Get Activation Code From Database By Email    user30072018160143@yopmail.com
+    Log    ${active_code_db}
 #    And Input Activation Code    ${active_code_db}
 #    Then Click Button Verify And Login
 #    Then Verify User Logged Successfully    User ${time}
@@ -40,8 +41,8 @@ I Register New User
 Get Activation Code From Database By Email
     [Arguments]    ${user_email}
     [Documentation]    SUITE_KEY: Get Activation Code From Database By Email
-    ${output_activation_code}=    Execute SQL String    SELECT * FROM "gateway-services".jhi_user WHERE email='user26072018105339@yopmail.com'
-#    ${output_activation_code}=    Execute SQL String    SELECT activation_key FROM "gateway-services".jhi_user WHERE email='${user_email}'
+#    ${output_activation_code}=    Execute SQL String    SELECT "gateway-services".jhi_user.activation_key FROM "gateway-services".jhi_user WHERE "gateway-services".jhi_user.email='user30072018160143@yopmail.com'
+    ${output_activation_code}=    Execute SQL String    SELECT activation_key FROM "gateway-services".jhi_user WHERE email='${user_email}'
     [Return]    ${output_activation_code}
 
 # Command: robot tests/Register/Beecow_Register.robot
