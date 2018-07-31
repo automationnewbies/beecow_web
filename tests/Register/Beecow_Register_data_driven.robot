@@ -2,7 +2,7 @@
 Documentation     /* Test Suite Register Beecow with data driven */
 ...               /* Author: Phuoc Ha */
 Force Tags        DataDriven
-Test Setup        Open Browser And Goes To Register Page
+Test Setup        Open Browser And Goes To Register Page    ${SERVER_TEST}
 Test Template     The Error Message Should Shown
 Test Teardown     Close All Browsers
 Resource          ${CURDIR}${/}lib_register.robot
@@ -47,15 +47,8 @@ TC004_Register Fail with fields Contain Special Characters - Data Driven
 
 *** Keywords ***
 Open Browser And Goes To Register Page
-#    Open Browser    ${sever_test}    ${BROWSER}
-    ${SERVER}    Catenate    SEPARATOR=    ${SERVER_URL}    :4444/wd/hub
-    Set Suite Variable    ${SERVER}
-    Open Browser    ${SERVER_TEST}    ${BROWSER}    remote_url=${SERVER}
-    Set Selenium Speed    ${DELAY}
-    Set Selenium Timeout    ${TIMEOUT}
-    Maximize Browser Window
-    Select Language    English
-    Click Button GetStarted
+    [Arguments]    ${server_test}
+    Open Browser And Click GetStarted Button    ${server_test}
     Click Button Signup Header
 
 The Error Message Should Shown

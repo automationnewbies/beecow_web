@@ -2,7 +2,7 @@
 Documentation     /* Test Suite Login Beecow with data driven */
 ...               /* Author: Phuoc Ha */
 Force Tags        DataDriven
-Test Setup        Open Browser And Goes To Login Page
+Test Setup        Open Browser And Goes To Login Page    ${SERVER_TEST}
 Test Template     The Error Message Should Shown
 Test Teardown     Close All Browsers
 Resource          ${CURDIR}${/}lib_login.robot
@@ -37,15 +37,8 @@ TC003_Login Fail with Username And Password Contain Special Characters - Data Dr
 
 *** Keywords ***
 Open Browser And Goes To Login Page
-#    Open Browser    ${sever_test}    ${BROWSER}
-    ${SERVER}    Catenate    SEPARATOR=    ${SERVER_URL}    :4444/wd/hub
-    Set Suite Variable    ${SERVER}
-    Open Browser    ${SERVER_TEST}    ${BROWSER}    remote_url=${SERVER}
-    Set Selenium Speed    ${DELAY}
-    Set Selenium Timeout    ${TIMEOUT}
-    Maximize Browser Window
-    Select Language    English
-    Click Button GetStarted
+    [Arguments]    ${server_test}
+    Open Browser And Click GetStarted Button    ${server_test}
     Click Button Login Header
 
 The Error Message Should Shown

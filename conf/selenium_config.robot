@@ -7,7 +7,7 @@ Library           Selenium2Library
 # Selenium Library connection settings
 ${METHOD_TEST}    Webdriver    # Webdriver (no need start selenium sever standalone) / Grid (need start selenium sever standalone on test machine)
 ${SERVER_TEST}     https://beecow.mediastep.ca
-${SERVER_URL}     http://localhost    # If ${METHOD_TEST}==Grid, change ${SERVER_URL} values with IP of test machine; Ex: http://192.168.33.10
+${SERVER_SELENIUM}     http://localhost    # If ${METHOD_TEST}==Grid, change ${SERVER_URL} values with IP of test machine; Ex: http://192.168.33.10
 #${BROWSER}       phantomjs    # Browser test on linux
 ${BROWSER}        gc    # ff/ie/gc/phantomjs
 # GENERAL:

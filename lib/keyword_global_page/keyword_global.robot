@@ -31,9 +31,9 @@ Open Browser And Click GetStarted Button
     [Arguments]    ${url_sever}
     [Documentation]    GLOBAL_KEY: Open Browser And Click GetStarted Button
 #    Open Browser    ${url_sever}    ${BROWSER}
-    ${SERVER}    Catenate    SEPARATOR=    ${SERVER_URL}    :4444/wd/hub
-    Set Suite Variable    ${SERVER}
-    Open Browser    ${url_sever}    ${BROWSER}    remote_url=${SERVER}
+    ${SERVER_STANDALONE}    Catenate    SEPARATOR=    ${SERVER_SELENIUM}    :4444/wd/hub
+    Set Suite Variable    ${SERVER_STANDALONE}
+    Open Browser    ${url_sever}    ${BROWSER}    remote_url=${SERVER_STANDALONE}
     Set Selenium Speed    ${DELAY}
     Set Selenium Timeout    ${TIMEOUT}
     Maximize Browser Window
